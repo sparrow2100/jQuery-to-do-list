@@ -26,4 +26,6 @@ submitButton.on("click", function (event) {
   close.on("click", function () {
     listItem.addClass("hidden");
   });
+  //drag items to reorder-- this isn't working
+  //   listItem.sortable();
 });
