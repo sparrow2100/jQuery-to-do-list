@@ -14,18 +14,16 @@ submitButton.on("click", function (event) {
   itemFlex.addClass("item-flex");
   listItem.append(itemFlex);
   itemFlex.append('<p class="item-left">' + inputValue + "</p>");
-  let itemLeft = $(".item-left");
-  itemFlex.append("<p class='close'>x</p>");
+  const crossButton = $("<button>X</button>");
+  crossButton.addClass("delete");
+  itemFlex.append(crossButton);
 
   //cross item off the list
   listItem.on("click", function () {
-    itemLeft.addClass("done");
+    $(this).toggleClass("done");
   });
   //delete list item
-  let close = $(".close");
-  close.on("click", function () {
-    listItem.addClass("hidden");
+  crossButton.on("click", function () {
+    $(listItem).addClass("hidden");
   });
-  //drag items to reorder-- this isn't working
-  //   listItem.sortable();
 });

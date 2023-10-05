@@ -28,17 +28,17 @@ li {
 
 #input {
   background-color: #f2f6f7;
-  border: 1px solid #5ab9c1;
+  border: 1px solid #0a6e75;
   padding: 10px;
   border-radius: 5px;
 }
 
 #submit {
-  background-color: #5ab9c1;
-  color: black;
+  background-color: #0a6e75;
+  color: white;
   font-weight: 500;
   border: none;
-  padding: 10px;
+  padding: 15px;
   font-size: 18px;
   border-radius: 20px;
   margin-left: 20px;
@@ -46,7 +46,7 @@ li {
 
 #submit:hover,
 #submit:focus {
-  background-color: #7bc1c6;
+  background-color: #35838c;
   cursor: pointer;
   transition: all 200ms ease-in-out;
 }
@@ -69,16 +69,12 @@ li {
   align-items: center;
 }
 
-.close {
-  margin-left: 20px;
-  color: #5ab9c1;
-  align-self: center;
-}
-
-.close:hover,
-.close:focus {
-  cursor: pointer;
-  text-decoration: underline;
+.delete {
+  color: #35838c;
+  font-weight: bold;
+  border: none;
+  background-color: white;
+  margin-left: 15px;
 }
 
 .done {
