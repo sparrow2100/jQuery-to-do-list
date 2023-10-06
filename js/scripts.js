@@ -5,21 +5,22 @@ submitButton.on("click", function (event) {
   event.preventDefault();
 
   //create and append elements
-  let listElement = $("#unordered-list");
-  let input = $("#input");
-  let inputValue = input.val();
-  let listItem = $("<li></li>");
+  const listElement = $("#unordered-list");
+  const input = $("#input");
+  const inputValue = input.val();
+  const listItem = $("<li></li>");
   listElement.append(listItem);
-  let itemFlex = $("<div></div>");
+  const itemFlex = $("<div></div>");
   itemFlex.addClass("item-flex");
   listItem.append(itemFlex);
-  itemFlex.append('<p class="item-left">' + inputValue + "</p>");
+  const itemLeft = $('<p class="item-left">' + inputValue + "</p>");
+  itemFlex.append(itemLeft);
   const crossButton = $("<button>X</button>");
   crossButton.addClass("delete");
   itemFlex.append(crossButton);
 
   //cross item off the list
-  listItem.on("click", function () {
+  itemLeft.on("click", function () {
     $(this).toggleClass("done");
   });
   //delete list item
